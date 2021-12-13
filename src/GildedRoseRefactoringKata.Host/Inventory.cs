@@ -9,7 +9,7 @@ public class Inventory
         _gildedRose = gildedRose;
     }
 
-    public void Initialize()
+    public void Run()
     {
         Console.WriteLine("OMGHAI!");
 

@@ -1,10 +1,14 @@
-﻿namespace GildedRoseRefactoringKata.Host
+﻿using GildedRoseRefactoringKata.Host.FoodQualityVerifiers;
+
+namespace GildedRoseRefactoringKata.Host
 {
     public class GildedRose
     {
+        private readonly IFoodQualityVerifierFactory _factory;
         IList<Item> Items;
-        public GildedRose()
+        public GildedRose(IFoodQualityVerifierFactory factory)
         {
+            _factory = factory;
         }
 
         public void SetItems(IList<Item> items)
@@ -18,9 +22,10 @@
             {
                 throw new InvalidOperationException($"{nameof(Items)} is null.");
             }
-            
-            for (var i = 0; i < Items.Count; i++)
+
+            foreach (var item in Items)
             {
+                var verifier = _factory.Create(item.Name);
                 if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                 {
                     if (Items[i].Quality > 0)
