@@ -10,6 +10,7 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IFoodQualityUpdater, BackstagePassesFoodQualityUpdater>();
         services.AddSingleton<IFoodQualityUpdater, NormalFoodQualityUpdater>();
         services.AddSingleton<IFoodQualityUpdater, SulfurasFoodQualityUpdater>();
+        services.AddSingleton<IFoodQualityUpdater, ConjuredFoodQualityUpdater>();
 
         return services;
     }
