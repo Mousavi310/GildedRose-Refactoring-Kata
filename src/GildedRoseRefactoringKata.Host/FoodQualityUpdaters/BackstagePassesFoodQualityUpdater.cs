@@ -1,6 +1,6 @@
-﻿namespace GildedRoseRefactoringKata.Host.FoodQualityVerifiers;
+﻿namespace GildedRoseRefactoringKata.Host.FoodQualityUpdaters;
 
-public class BackstagePassesFoodQualityVerifier : IFoodQualityVerifier
+public class BackstagePassesFoodQualityUpdater : IFoodQualityUpdater
 {
     public string Name => "Backstage passes to a TAFKAL80ETC concert";
 

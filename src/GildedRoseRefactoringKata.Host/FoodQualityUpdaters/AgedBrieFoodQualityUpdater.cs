@@ -1,13 +1,13 @@
 ﻿using GildedRoseRefactoringKata.Host.Options;
 using Microsoft.Extensions.Options;
 
-namespace GildedRoseRefactoringKata.Host.FoodQualityVerifiers;
+namespace GildedRoseRefactoringKata.Host.FoodQualityUpdaters;
 
-public class AgedBrieFoodQualityVerifier : IFoodQualityVerifier
+public class AgedBrieFoodQualityUpdater : IFoodQualityUpdater
 {
     private readonly IOptions<FoodOptions> _options;
 
-    public AgedBrieFoodQualityVerifier(IOptions<FoodOptions> options)
+    public AgedBrieFoodQualityUpdater(IOptions<FoodOptions> options)
     {
         _options = options;
     }

@@ -1,12 +1,12 @@
-﻿using GildedRoseRefactoringKata.Host.FoodQualityVerifiers;
+﻿using GildedRoseRefactoringKata.Host.FoodQualityUpdaters;
 
 namespace GildedRoseRefactoringKata.Host
 {
     public class GildedRose
     {
-        private readonly IFoodQualityVerifierFactory _factory;
+        private readonly IFoodQualityUpdaterFactory _factory;
         IList<Item> Items;
-        public GildedRose(IFoodQualityVerifierFactory factory)
+        public GildedRose(IFoodQualityUpdaterFactory factory)
         {
             _factory = factory;
         }

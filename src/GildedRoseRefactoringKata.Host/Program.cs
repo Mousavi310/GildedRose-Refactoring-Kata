@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using GildedRoseRefactoringKata.Host;
-using GildedRoseRefactoringKata.Host.FoodQualityVerifiers;
+using GildedRoseRefactoringKata.Host.FoodQualityUpdaters;
 using GildedRoseRefactoringKata.Host.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,7 +14,7 @@ var host = Host.CreateDefaultBuilder(args)
     {
         services.TryAddSingleton<GildedRose>();
         services.TryAddSingleton<Inventory>();
-        services.TryAddSingleton<IFoodQualityVerifierFactory, FoodQualityVerifierFactory>();
+        services.TryAddSingleton<IFoodQualityUpdaterFactory, FoodQualityUpdaterFactory>();
         services.AddOptions<FoodOptions>().Bind(ctx.Configuration.GetSection(FoodOptions.SectionName))
             .ValidateDataAnnotations();
     })

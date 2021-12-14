@@ -1,6 +1,6 @@
-﻿namespace GildedRoseRefactoringKata.Host.FoodQualityVerifiers;
+﻿namespace GildedRoseRefactoringKata.Host.FoodQualityUpdaters;
 
-public class NormalFoodQualityVerifier : IFoodQualityVerifier
+public class NormalFoodQualityUpdater : IFoodQualityUpdater
 {
     public string Name => null;
     public void Verify(Item item)
