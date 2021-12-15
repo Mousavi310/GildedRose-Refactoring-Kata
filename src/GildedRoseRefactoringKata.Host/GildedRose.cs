@@ -25,8 +25,8 @@ namespace GildedRoseRefactoringKata.Host
 
             foreach (var item in Items)
             {
-                var verifier = _factory.Create(item.Name);
-                verifier.Verify(item);
+                var qualityUpdater = _factory.Create(item.Name);
+                qualityUpdater.Verify(item);
             }
         }
     }
