@@ -24,8 +24,8 @@ var host = Host.CreateDefaultBuilder(args)
     })
     .Build();
 
-var gildedRose = host.Services.GetRequiredService<Inventory>();
-gildedRose.Run();
+var inventory = host.Services.GetRequiredService<Inventory>();
+inventory.Run();
 
 await host.RunAsync();
 
